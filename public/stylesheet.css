@@ -43,5 +43,5 @@ h1, p {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-padding-bottom: 10px;
+  padding-bottom: 5px;
 }

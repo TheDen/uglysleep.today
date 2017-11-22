@@ -7,25 +7,28 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <link rel='stylesheet' href='ribbon.css' meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" /> 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76175181-6"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-76175181-6');
+</script>
 
-    <title>UglySleep</title>
-  </head>
-  <body>
-    <h1>UglySleep.<span style="color: yellow;">today</span><h1>
-        <br />
-        <p style="color: red;"> <%= sdata[2] %></p>
-        <br />
-        <p> <span style="color: green;"> <%= sdata[0] %> </span>hours of sleep </p>
-        <br />
-        <p> Woke up <span style="color: blue;"> <%= sdata[1] %> </span>times while sleeping </p>
-        <!--  <a class="github-fork-ribbon" href="https://github.com/theden/badfood" target="_blank" title="Fork me on GitHub">Fork me on GitHub</a> -->
-<!--  <div id="img-wrap">
-    <img src="images/banner.png" alt="BadFood Banner" />
-  </div>
-  -->
-  <div id="link-wrap">
-    <a style="display: inline-block; float: left; text-decoration: none;" href="http://theden.sh" target="_blank">✌theden.sh</a>
-		<a style="display: inline-block; float: right; text-decoration: none; color: pink;">fork me</div></a>
-  </div>
-</body>
-</html>
+<title>UglySleep</title>
+	</head>
+	<body>
+		<h1>UglySleep.<span style="color: yellow;">today</span><h1>
+				<br />
+				<p style="color: red;"> <%= sdata[2] %></p>
+				<br />
+				<p> <span style="color: green;"> <%= sdata[0] %> </span>hours of sleep </p>
+				<br />
+				<p> Woke up <span style="color: blue;"> <%= sdata[1] %> </span>times while sleeping </p>
+				<div id="link-wrap">
+					<a style="display: inline-block; float: left; text-decoration: none;" href="http://theden.sh" target="_blank">✌theden.sh</a>
+					<a style="display: inline-block; float: right; text-decoration: none; color: pink;" href="https://github.com/TheDen/uglysleep.today" target="_blank">fork me</div></a>
+			</div>
+		</body>
+	</html>
