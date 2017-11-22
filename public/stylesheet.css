@@ -1,0 +1,47 @@
+html{
+  //  font-family: 'VT323', monospace ;
+  font-family: 'Press Start 2P', cursive;
+
+  background-color: black;
+}
+
+
+h1, p {
+  text-align: center;
+  color: white;
+}
+
+#img-wrap {
+
+  text-align:center;  
+  position: fixed !important; 
+  top: 10px;
+  width: 100%; 
+  z-index: 10000; 
+  //  height: 50px; 
+  display: inline-block; 
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#link-wrap {
+//  text-align:center;
+  position: fixed !important;
+  font-size: 12px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10000;
+  display: inline-block;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+padding-bottom: 10px;
+}
