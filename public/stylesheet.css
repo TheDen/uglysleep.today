@@ -1,7 +1,5 @@
 html{
-  //  font-family: 'VT323', monospace ;
   font-family: 'Press Start 2P', cursive;
-
   background-color: black;
 }
 
@@ -9,23 +7,7 @@ html{
 h1, p {
   text-align: center;
   color: white;
-}
-
-#img-wrap {
-
-  text-align:center;  
-  position: fixed !important; 
-  top: 10px;
-  width: 100%; 
-  z-index: 10000; 
-  //  height: 50px; 
-  display: inline-block; 
-
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  font-size: 4.5vh;
 }
 
 #link-wrap {
@@ -37,6 +19,7 @@ h1, p {
   width: 100%;
   z-index: 10000;
   display: inline-block;
+  font-size: 2vh;
 
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -44,4 +27,16 @@ h1, p {
   -o-user-select: none;
   user-select: none;
   padding-bottom: 5px;
+}
+
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: white;
+       color: yellow;
+}
+
+/* Works in Safari */
+::selection {
+       background-color: white;
+       color: yellow;
 }
