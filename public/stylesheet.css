@@ -40,3 +40,25 @@ h1, p {
        background-color: white;
        color: yellow;
 }
+
+@keyframes greywhite {
+  0% {
+    color: grey;
+  }
+  49% {
+    color: grey;
+  }
+  50% {
+    color: white;
+  }
+  99% {
+    color: white;
+  }
+}
+
+.anim-grey-white {
+  animation: 2s greywhite infinite;
+}
+.anim-white-grey {
+  animation: 2s greywhite 1s infinite;
+}
