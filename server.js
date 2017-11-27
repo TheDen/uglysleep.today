@@ -25,7 +25,7 @@ var sleepdata = function() {
 sleepdata();
 
 var CronJob = require('cron').CronJob;
-new CronJob('*/20 * * * *', function() {
+new CronJob('*/10 * * * *', function() {
   sleepdata();
 }, null, true, 'Australia/Sydney');
 
