@@ -16,8 +16,16 @@ npm install
 
 ## Run
 
-1. Generate an OAuth 2.0 Access Token, follwing [Nokia's guide](https://developer.health.nokia.com/oauth2)
-2. Export the token as the environment variable `ACCESS_TOKEN`
-3. Then run `npm start` or `node server.js`
-4. Locally the website will run on port `5000`
+* Generate an OAuth 2.0 Access/Refresh Token, follwing [Nokia's guide](https://developer.health.nokia.com/oauth2)
+
+* Export your `client_id`, `client_secret`, and `refresh_token`, i.e,
+
+```bash
+export CLIENT_ID=XXX
+export CLIENT_SECRET=XXX
+export REFRESH_TOKEN=XXX
+```
+
+* Then run `npm start` or `node server.js`
+* Locally the website will run on port `5000`
 
