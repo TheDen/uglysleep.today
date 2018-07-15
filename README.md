@@ -1,5 +1,5 @@
-# [uglysleep.today](http://uglysleep.today/)
-WebApp that tracks my daily sleeping habits 💤
+# [uglysleep.today](http://uglysleep.today/) 
+![Sleep](public/favicon.ico)  WebApp that tracks my daily sleeping habits 💤
 
 Hosted on Heroku.
 
@@ -20,3 +20,4 @@ npm install
 2. Export the token as the environment variable `ACCESS_TOKEN`
 3. Then run `npm start` or `node server.js`
 4. Locally the website will run on port `5000`
+
