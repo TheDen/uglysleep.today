@@ -5,11 +5,12 @@ app.set('view engine', 'ejs')
 
 app.use(express.static('public'))
 
-accesstoken = process.env.ACCESS_TOKEN
+clientid = process.env.CLIENT_ID
+clientsecret = process.env.CLIENT_SECRET
+refeshtoken = process.env.REFRESH_TOKEN
 
 sdata = []
-
-var sleepdata = function() {
+var sleepdata = function(accesstoken) {
   request('https://api.health.nokia.com/v2/sleep?action=getsummary&lastupdate=0&access_token=' + accesstoken, { json: true }, (err, res, body) => {
     if (err) { return console.log(err); }
     var idx = body.body.series.length-1
@@ -21,11 +22,31 @@ var sleepdata = function() {
   });
 }
 
-sleepdata();
+var gettoken= function() {
+  request.post(
+    {
+      headers: {'content-type' : 'application/x-www-form-urlencoded'},
+      url: 'https://account.health.nokia.com/oauth2/token',
+      form:
+      {
+        'grant_type': 'refresh_token',
+        'client_id': clientid,
+        'client_secret': clientsecret,
+        'refresh_token': refeshtoken,
+      },
+      json: true,
+    },
+    (err, response, body) => {
+      if (err) { return console.log(err); }
+      sleepdata(body.access_token)
+    });
+}
+
+gettoken();
 
 var CronJob = require('cron').CronJob;
-new CronJob('*/10 * * * *', function() {
-  sleepdata();
+new CronJob('0 * * * *', function() {
+  gettoken();
 }, null, true, 'Australia/Sydney');
 
 app.get('/', (req, res) => {
