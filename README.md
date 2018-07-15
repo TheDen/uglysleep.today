@@ -1,38 +1,22 @@
 # [uglysleep.today](http://uglysleep.today/)
-WebApp that tracks my daily sleeping habits 💤 
+WebApp that tracks my daily sleeping habits 💤
 
 Hosted on Heroku.
 
 ## Requirements
 
 * Withings activité (my device, any Withings or Nokia connected device will work)
-* API Key from Nokia Health — [https://developer.health.nokia.com/api](https://developer.health.nokia.com/api)
+* OAuth 2.0 code from [Nokia](https://developer.health.nokia.com/oauth2)
 
 ## Build
 
-```
+```bash
 npm install
 ```
 
 ## Run
 
-Export the suffix of the API URL with the parameters
-
-```
-oauth_nonce
-oauth_signature
-oauth_signature_method
-oauth_timestamp
-oauth_token
-oauth_version
-userid
-```
-
-as the environment variable `APIKEY`
-
-For example,
-```
-&oauth_consumer_key=1234&oauth_nonce=1234&oauth_signature=1234&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1234&oauth_token=1234&oauth_version=1.0&userid=1223
-```
-
-Then run `npm start`.
+1. Generate an OAuth 2.0 Access Token, follwing [Nokia's guide](https://developer.health.nokia.com/oauth2)
+2. Export the token as the environment variable `ACCESS_TOKEN`
+3. Then run `npm start` or `node server.js`.
+4. Locally the website will run on port `5000`
