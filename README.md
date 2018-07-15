@@ -16,7 +16,7 @@ npm install
 
 ## Run
 
-* Generate an OAuth 2.0 Access/Refresh Token, follwing [Nokia's guide](https://developer.health.nokia.com/oauth2)
+* Generate an OAuth 2.0 Access/Refresh Token, following [Nokia's guide](https://developer.health.nokia.com/oauth2)
 
 * Export your `client_id`, `client_secret`, and `refresh_token`, i.e,
 
