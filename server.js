@@ -45,7 +45,7 @@ var gettoken= function() {
 gettoken();
 
 var CronJob = require('cron').CronJob;
-new CronJob('0 * * * *', function() {
+new CronJob('*/30 * * * *', function() {
   gettoken();
 }, null, true, 'Australia/Sydney');
 
