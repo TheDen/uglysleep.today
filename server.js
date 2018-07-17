@@ -10,7 +10,7 @@ clientsecret = process.env.CLIENT_SECRET
 refreshtoken = process.env.REFRESH_TOKEN
 
 sdata = []
-sleepdata = function(accesstoken) {
+function sleepdata(accesstoken) {
   request('https://api.health.nokia.com/v2/sleep?action=getsummary&lastupdate=0&access_token=' + accesstoken, { json: true }, (err, res, body) => {
     if (err) { return console.log(err); }
     var idx = body.body.series.length-1
