@@ -4,15 +4,14 @@ WORKDIR /app
 COPY package.json server.js /app/
 COPY views /app/views/
 COPY public /app/public
-
-RUN npm install \
-      && chown -R node /app/
+RUN npm install
 
 FROM node:carbon-alpine
 
 COPY --from=builder /app /app
-WORKDIR /app
+RUN chown -R node:node /app/
 USER node
+WORKDIR /app
 EXPOSE 5000
 
 CMD ["node", "server.js"]
